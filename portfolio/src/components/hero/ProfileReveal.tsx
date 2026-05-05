@@ -30,13 +30,13 @@ export default function ProfileReveal() {
         initial={{
           opacity: 0,
           y: 80,
-          scale: 1.05,
+          scale: 1.6,
           filter: "blur(20px)",
         }}
         animate={{
           opacity: 1,
           y: 0,
-          scale: 1.8,
+          scale: 1.6,
           filter: "blur(0px)",
         }}
         transition={{

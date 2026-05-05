@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function AboutContent() {
   return (
@@ -37,14 +38,25 @@ export default function AboutContent() {
         transition={{ duration: 1 }}
         viewport={{ once: true }}
         className="
+          relative
           h-[420px]
+          rounded-xl
+          overflow-hidden
+          border border-white/10
           bg-gradient-to-br
           from-white/5
           to-white/0
-          rounded-xl
-          border border-white/10
         "
-      />
+      >
+        <Image
+          src=""
+          alt="Profile Visual"
+          fill
+          className="object-cover"
+          priority
+        />
+      </motion.div>
+
     </div>
   );
 }

@@ -2,29 +2,32 @@
 
 import React, { forwardRef } from "react";
 
-const Signature = forwardRef<
-  HTMLImageElement,
-  React.HTMLAttributes<HTMLImageElement>
->((props, ref) => {
-  return (
-    <img
-      ref={ref}
-      src="/images/signature.png"
-      alt="Signature"
-      {...props}
-      className="
-        absolute
-        bottom-20
-        left-1/2
-        -translate-x-1/2
-        w-[240px]
-        opacity-0
-        translate-y-10
-        pointer-events-none
-      "
-    />
-  );
-});
+type SignatureProps = React.HTMLAttributes<HTMLImageElement>;
+
+const Signature = forwardRef<HTMLImageElement, SignatureProps>(
+  ({ className = "", ...props }, ref) => {
+    return (
+      <img
+        ref={ref}
+        src="/images/signature.png"
+        alt="Signature"
+        {...props}
+        className={`
+          w-[60vw]
+          max-w-[700px]
+          min-w-[220px]
+          h-auto
+          object-contain
+          select-none
+          pointer-events-none
+          opacity-100
+          translate-y-0
+          ${className}
+        `}
+      />
+    );
+  }
+);
 
 Signature.displayName = "Signature";
 

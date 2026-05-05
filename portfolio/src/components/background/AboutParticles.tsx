@@ -21,7 +21,7 @@ export default function AboutParticles() {
 
         particles: {
           number: {
-            value: 35,
+            value: 200,
             density: {
               enable: true,
               area: 900,
@@ -37,7 +37,7 @@ export default function AboutParticles() {
           },
 
           opacity: {
-            value: 0.15,
+            value: 1.5,
           },
 
           size: {
